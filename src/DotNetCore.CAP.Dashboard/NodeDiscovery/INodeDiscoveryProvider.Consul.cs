@@ -29,6 +29,8 @@ namespace DotNetCore.CAP.Dashboard.NodeDiscovery
             {
                 using var consul = new ConsulClient(config =>
                 {
+                    config.Datacenter = _options.Datacenter;
+                    config.Token = _options.Token;
                     config.WaitTime = TimeSpan.FromSeconds(5);
                     config.Address = new Uri($"http://{_options.DiscoveryServerHostName}:{_options.DiscoveryServerPort}");
                 });
@@ -61,6 +63,8 @@ namespace DotNetCore.CAP.Dashboard.NodeDiscovery
 
                 using var consul = new ConsulClient(config =>
                 {
+                    config.Datacenter = _options.Datacenter;
+                    config.Token = _options.Token;
                     config.WaitTime = TimeSpan.FromSeconds(5);
                     config.Address = new Uri($"http://{_options.DiscoveryServerHostName}:{_options.DiscoveryServerPort}");
                 });
@@ -120,6 +124,8 @@ namespace DotNetCore.CAP.Dashboard.NodeDiscovery
 
                 using var consul = new ConsulClient(config =>
                 {
+                    config.Datacenter = _options.Datacenter;
+                    config.Token = _options.Token;
                     config.WaitTime = TimeSpan.FromSeconds(5);
                     config.Address = new Uri($"http://{_options.DiscoveryServerHostName}:{_options.DiscoveryServerPort}");
                 });

@@ -28,6 +28,10 @@ namespace DotNetCore.CAP.Dashboard.NodeDiscovery
             Scheme = DefaultScheme;
         }
 
+        public string Datacenter { get; set; }
+
+        public string Token { get; set; }
+
         public string DiscoveryServerHostName { get; set; }
         public int DiscoveryServerPort { get; set; }
 
